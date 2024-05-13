@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+    <h1>Les produits</h1>
+    <ul>
+        {% for product in products %}
+            <li><a href="{{path('product_show',{'slug':product.slug})}}">{{product.title}}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %}
